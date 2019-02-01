@@ -13,9 +13,9 @@ class EmailParser
     @emails=emails
 
     array = emails.split(" ")
-    binding.pry
     array.each {|email| @@all << email}
     @@all = @@all.uniq
+    binding.pry
   end
 
   def parse
