@@ -9,8 +9,8 @@ attr_accessor :emails
 @@all = []
 
   def initialize(emails)
-    emails.split(", ") || emails.split(" ")
-    @@all << emails
+    array = emails.split(", ")
+    array.each {|email| @@all << email}
   end
 
   def parse
