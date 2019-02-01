@@ -10,7 +10,7 @@ attr_accessor :emails
 
   def initialize(emails)
     @emails=emails
-    array = emails.split(", ")
+    array = emails.split(" ")
     @@all << array
     @@all =  @@all.flatten.uniq
   end
