@@ -7,13 +7,18 @@ require 'pry'
 class EmailParser
   attr_accessor :emails
 
+  @@all = []
 
   def initialize(emails)
     @emails=emails
+
+    array = emails.split(/, | /).uniq
+    array.each {|email| @@all << email}
+    @@all = @@all.uniq
   end
 
   def parse
-    emails.split(/, | /).uniq
+    @@all
   end
 
 end
