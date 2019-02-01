@@ -13,7 +13,7 @@ class EmailParser
 
     array = emails.split(/, | /).uniq
     array.each {|email| new_array << email}
-    new_array = new_array.uniq 
+    new_array = new_array.uniq
   end
 
   def parse
