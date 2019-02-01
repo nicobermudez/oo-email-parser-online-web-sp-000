@@ -12,7 +12,7 @@ attr_accessor :emails
     @emails=emails
     array = emails.split(", ")
     @@all << array
-    @@all.flatten
+    @@all.flatten.uniq
   end
 
   def parse
