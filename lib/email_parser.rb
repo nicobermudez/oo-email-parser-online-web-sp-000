@@ -9,7 +9,7 @@ attr_accessor :emails
 @@all = []
 
   def initialize(emails)
-    emails.splt(", ") || emails.split(" ")
+    emails.split(", ") || emails.split(" ")
     @@all << emails
   end
 
