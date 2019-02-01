@@ -4,14 +4,12 @@
 # or whitespace (' ').
 
 class EmailParser
-attr_accessor :emails
+  attr_accessor :emails
 
-@@all = []
+  @@all = []
 
-def self.all
-  @@all
-end
   def initialize(emails)
+    @emails=emails
     array = emails.split(" ")
     array.each {|email| @@all << email}
     @@all = @@all.uniq
