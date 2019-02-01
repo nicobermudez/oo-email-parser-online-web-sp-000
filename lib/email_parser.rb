@@ -13,7 +13,7 @@ class EmailParser
     @emails=emails
 
     array = emails.split(" ")
-    binding.pry
+    binding pry
     array.each {|email| @@all << email}
     @@all = @@all.uniq
   end
