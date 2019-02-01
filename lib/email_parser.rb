@@ -11,6 +11,7 @@ attr_accessor :emails
   def initialize(emails)
     emails.include?(",") ? array = emails.split(", ") : array = emails.split(" ")
     array.each {|email| @@all << email}
+    @@all = @@all.uniq
   end
 
   def parse
