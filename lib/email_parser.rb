@@ -12,7 +12,7 @@ class EmailParser
   def initialize(emails)
     @emails=emails
     temp = emails.split(" ")
-    array.each {|email| @@all << email}
+    temp.each {|email| @@all << email}
     @@all = @@all.uniq
   end
 
