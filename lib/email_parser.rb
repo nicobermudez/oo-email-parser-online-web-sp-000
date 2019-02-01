@@ -9,15 +9,14 @@ class EmailParser
 
   def initialize(emails)
     @emails=emails
+  end
+
+  def parse
     new_array=[]
 
     array = emails.split(/, | /).uniq
     array.each {|email| new_array << email}
     new_array = new_array.uniq
-  end
-
-  def parse
-    @@all
   end
 
 end
