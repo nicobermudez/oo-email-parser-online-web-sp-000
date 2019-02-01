@@ -9,7 +9,7 @@ attr_accessor :emails
 @@all = []
 
   def initialize(emails)
-    emails.include?(",") ? array = emails.split(", ") : array = emails.split(" ")
+    array = emails.split(", ").split(" ")
     array.each {|email| @@all << email}
     @@all = @@all.uniq
   end
