@@ -14,7 +14,7 @@ class EmailParser
 
     array = emails.split(/, | /).uniq
     array.each {|email| @@all << email}
-    @@all = @@all.uniq
+    @@all = @@all
   end
 
   def parse
