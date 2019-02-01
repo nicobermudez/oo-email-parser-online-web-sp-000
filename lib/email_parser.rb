@@ -11,7 +11,7 @@ attr_accessor :emails
   def initialize(emails)
     @emails=emails
     array = emails.split(", ")
-    @@all << array 
+    @@all << array
     @@all.flatten
   end
 
