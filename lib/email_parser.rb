@@ -7,9 +7,10 @@ class EmailParser
   attr_accessor :emails
 
   @@all = []
-  array =[]
+
 
   def initialize(emails)
+    array =[]
     @emails=emails
     temp = emails.split(" ")
     temp.each {|email| array << email}
